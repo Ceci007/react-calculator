@@ -1,7 +1,7 @@
 import React from 'react';
 import Big from 'big.js';
 import PropTypes from 'prop-types';
-import "./App.css";
+import './App.css';
 
 const testBig = new Big('4.321e+4');
 const bigMsg = `New Big('4.321e+4') is: ${testBig}`;
