@@ -51,5 +51,5 @@ Give a ⭐️ if you like this project!
 
 👤 **Cecilia Benitez**
 
-- Github: [Cecilia Benitez](https://github.com/Ceci007)
-- Linkedin: [Cecilia Benitez](https://www.linkedin.com/in/cecilia-benítez)
+- [Github](https://github.com/Ceci007)
+- [LinkedIn](https://www.linkedin.com/in/cecilia-benítez)
