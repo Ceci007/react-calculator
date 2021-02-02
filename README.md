@@ -53,3 +53,6 @@ Give a ⭐️ if you like this project!
 
 - [Github](https://github.com/Ceci007)
 - [LinkedIn](https://www.linkedin.com/in/cecilia-benítez)
+
+## 📝 License
+This project is [MIT](lic.url) licensed.
