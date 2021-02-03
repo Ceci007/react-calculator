@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Display = ({ result }) => (
   <div className="calculator__screen">
-    <h5 class="calculator__result">
+    <h5 className="calculator__result">
       {result}
     </h5>
   </div>

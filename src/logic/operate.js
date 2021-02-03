@@ -3,7 +3,7 @@ import Big from 'big.js';
 const operate = (numberOne, numberTwo, operation) => {
   const big1 = Big(numberOne);
   const big2 = Big(numberTwo);
-  
+
   switch (operation) {
     case '%':
       if (big1.times(big2) === 0) {
