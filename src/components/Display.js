@@ -1,9 +1,12 @@
 import React from 'react';
-import '../index.css';
 import PropTypes from 'prop-types';
 
 const Display = ({ result }) => (
-  <div className="display">{result}</div>
+  <div className="calculator__screen">
+    <h5 class="calculator__result">
+      {result}
+    </h5>
+  </div>
 );
 
 Display.propTypes = {

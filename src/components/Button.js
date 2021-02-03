@@ -1,9 +1,8 @@
 import React from 'react';
-import '../index.css';
 import PropTypes from 'prop-types';
 
-const Button = ({ name }) => (
-  <button type="button">{ name }</button>
+const Button = ({ name, dynamicClass = "btn" }) => (
+    <button type="button" className={`${dynamicClass}`}>{ name }</button>
 );
 
 Button.propTypes = {
