@@ -1,31 +1,26 @@
 import React from 'react';
-import '../index.css';
 import Button from './Button';
 
 function ButtonPannel() {
-  const defaultSize = 'simple';
-  const defaultColor = 'gray';
-  const colorSecundary = 'orange';
-  const doubleSize = 'double';
-  const propsBtns = [{ name: 'AC', size: defaultSize, color: defaultColor },
-    { name: '+/-', size: defaultSize, color: defaultColor },
-    { name: '%', size: defaultSize, color: defaultColor },
-    { name: '÷', size: defaultSize, color: colorSecundary },
-    { name: '7', size: defaultSize, color: defaultColor },
-    { name: '8', size: defaultSize, color: defaultColor },
-    { name: '9', size: defaultSize, color: defaultColor },
-    { name: 'X', size: defaultSize, color: colorSecundary },
-    { name: '4', size: defaultSize, color: defaultColor },
-    { name: '5', size: defaultSize, color: defaultColor },
-    { name: '6', size: defaultSize, color: defaultColor },
-    { name: '-', size: defaultSize, color: colorSecundary },
-    { name: '1', size: defaultSize, color: defaultColor },
-    { name: '2', size: defaultSize, color: defaultColor },
-    { name: '3', size: defaultSize, color: defaultColor },
-    { name: '+', size: defaultSize, color: colorSecundary },
-    { name: '0', size: doubleSize, color: defaultColor },
-    { name: '.', size: defaultSize, color: defaultColor },
-    { name: '=', size: defaultSize, color: colorSecundary }];
+  const propsBtns = [{ name: 'AC' },
+    { name: '+/-' },
+    { name: '%' },
+    { name: '÷' },
+    { name: '7' },
+    { name: '8' },
+    { name: '9' },
+    { name: 'X' },
+    { name: '4' },
+    { name: '5' },
+    { name: '6' },
+    { name: '-' },
+    { name: '1' },
+    { name: '2' },
+    { name: '3' },
+    { name: '+' },
+    { name: '0' },
+    { name: '.' },
+    { name: '=' }];
 
   const createPannelLine = (propsBtns, line) => {
     const result = [];
@@ -35,8 +30,6 @@ function ButtonPannel() {
       result.push(<Button
         key={index + 1}
         name={propsBtns[index].name}
-        color={propsBtns[index].color}
-        size={propsBtns[index].size}
       />);
       i += 1;
       index += 1;
