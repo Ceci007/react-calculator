@@ -51,6 +51,6 @@ const ButtonPannel = () => {
       { createPannelLine(propsBtns, 4) }
     </div>
   );
-}
+};
 
 export default ButtonPannel;
