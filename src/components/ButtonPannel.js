@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-function ButtonPannel() {
+const ButtonPannel = () => {
   const propsBtns = [{ name: 'AC' },
     { name: '+/-' },
     { name: '%' },
@@ -51,6 +51,6 @@ function ButtonPannel() {
       { createPannelLine(propsBtns, 4) }
     </div>
   );
-}
+};
 
 export default ButtonPannel;
