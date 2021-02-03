@@ -8,8 +8,6 @@ const Button = ({ name }) => (
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
 };
 
 export default Button;
