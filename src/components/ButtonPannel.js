@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-function ButtonPannel() {
+const ButtonPannel = () => {
   const propsBtns = [{ name: 'AC' },
     { name: '+/-' },
     { name: '%' },
