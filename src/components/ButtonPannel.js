@@ -2,7 +2,6 @@ import React from 'react';
 import Button from './Button';
 
 const ButtonPannel = () => {
-  const dynamicClass = "btn";
   const propsBtns = [{ name: 'AC', dynamicClass: "btn highlight" },
     { name: '+/-', dynamicClass: "btn highlight" },
     { name: '%', dynamicClass: "btn highlight" },

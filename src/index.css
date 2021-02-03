@@ -79,7 +79,7 @@ body {
          grid-row-start: span 2;
          grid-column-start: 4;
          border-radius: 50px; 
-         width: 100px;
+         width: 98px;
         }
          .calculator__buttons .btn.equal:hover {
            background-color: #5277f9; }
