@@ -15,7 +15,7 @@ Creating a simple calculator with React
 
 ## Live Demo
 
-[Live Demo](https://angry-archimedes-6a2f1c.netlify.app/)
+[Live Demo](https://calculator-ceci.netlify.app/)
 
 ## Installation
 
