@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-const ButtonPannel = () => {
+const ButtonPannel = (clickHandler) => {
   const propsBtns = [{ name: 'AC', dynamicClass: 'btn highlight' },
     { name: '+/-', dynamicClass: 'btn highlight' },
     { name: '%', dynamicClass: 'btn highlight' },
@@ -34,6 +34,7 @@ const ButtonPannel = () => {
           key={index + 1}
           name={propsBtns[index].name}
           dynamicClass={propsBtns[index].dynamicClass}
+          clickHandler={clickHandler.onClick}
         />,
       );
       i += 1;
