@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from './Button';
 
-export function ButtonPanel(props) {
+export function ButtonPannel(props) {
   return (
     <div>
       <div className="calculator__buttons">
@@ -39,8 +39,8 @@ export function ButtonPanel(props) {
   );
 }
 
-ButtonPanel.propTypes = {
+ButtonPannel.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
-export default { ButtonPanel };
+export default { ButtonPannel };
