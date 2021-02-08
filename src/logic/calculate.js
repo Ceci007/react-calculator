@@ -64,7 +64,7 @@ export function calculate(calculator, buttonName) {
       newCalc.operation = buttonName;
       break;
   }
-  
+
   return newCalc;
 }
 
