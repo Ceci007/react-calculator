@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Display from './Display';
 import ButtonPannel from './ButtonPannel';
 // eslint-disable-next-line no-unused-vars
