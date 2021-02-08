@@ -38,7 +38,7 @@ export function ButtonPanel(props) {
     </div>
   );
 }
- 
+
 ButtonPanel.propTypes = {
   onClick: PropTypes.func.isRequired,
 };

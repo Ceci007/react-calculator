@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
- 
+
 export function Display(props) {
   const { operation, numberDisplay } = props;
   return (
