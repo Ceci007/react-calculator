@@ -6,6 +6,7 @@ export function calculate(calculator, buttonName) {
     total: calculator.total,
     operation: calculator.operation,
   };
+
   switch (buttonName) {
     case '1':
     case '2':
@@ -63,6 +64,7 @@ export function calculate(calculator, buttonName) {
       newCalc.operation = buttonName;
       break;
   }
+  
   return newCalc;
 }
 

@@ -33,7 +33,7 @@ export function ButtonPannel(props) {
         <Button buttonName="0" onClick={() => props.onClick('0')} dinamycClass="btn" />
         <Button buttonName="." onClick={() => props.onClick('.')} dinamycClass="btn" />
         <Button buttonName="=" onClick={() => props.onClick('=')} dinamycClass="btn equal" />
-        <Button buttonName="" />
+        <Button buttonName="" onClick={() => props.onClick('')}/>
       </div>
     </div>
   );
