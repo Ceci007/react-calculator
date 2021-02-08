@@ -1,20 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const Display = ({ result }) => (
-  <div className="calculator__screen">
-    <h5 className="calculator__result">
-      {result}
-    </h5>
-  </div>
-);
+ 
+export function Display(props) {
+  const { operation, numberDisplay } = props;
+  return (
+    <div className="calculator__screen">
+      <span className="calculator__operation">{ operation }</span>
+      <span className="calculator__result">{ numberDisplay == null ? '0' : numberDisplay }</span>
+    </div>
+  );
+}
 
 Display.propTypes = {
-  result: PropTypes.string,
+  numberDisplay: PropTypes.string,
+  operation: PropTypes.string,
 };
 
 Display.defaultProps = {
-  result: '0',
+  numberDisplay: '0',
+  operation: '',
 };
 
-export default Display;
+export default { Display };

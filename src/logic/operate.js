@@ -1,29 +1,39 @@
-import Big from 'big.js';
+const Big = require('big.js');
 
-const operate = (numberOne, numberTwo, operation) => {
-  const big1 = Big(numberOne);
-  const big2 = Big(numberTwo);
-
-  switch (operation) {
-    case '%':
-      if (big1.times(big2) === 0) {
-        return '0';
-      }
-      return big1.times(big2).div(100).toString();
-    case '÷':
-      if (big1.toString() === '0' || big2.toString() === '0') {
-        return 'Error Division by 0';
-      }
-      return big1.div(big2).toString();
-    case 'x':
-      return big1.times(big2).toString();
-    case '-':
-      return big1.minus(big2).toString();
-    case '+':
-      return big1.plus(big2).toString();
-    default:
-      return big1;
+export function operate(numberOne, numberTwo, operation) {
+  let result = 0;
+  let x;
+  let y;
+  if (numberOne != null) {
+    x = new Big(numberOne);
   }
-};
 
-export default operate;
+  if (numberTwo != null) {
+    y = new Big(numberTwo);
+  }
+  switch (operation) {
+    case '+':
+      result = y.plus(x);
+      break;
+    case '-':
+      result = y.minus(x);
+      break;
+    case 'x':
+      result = y.times(x);
+      break;
+    case '÷':
+      result = y.div(x);
+      break;
+    case '%':
+      result = x.div(100);
+      break;
+    case '+/-':
+      result = x.times(-1);
+      break;
+    default:
+      result = 0;
+  }
+  return result;
+}
+
+export default { operate };

@@ -1,62 +1,46 @@
 import React from 'react';
-import Button from './Button';
+import PropTypes from 'prop-types';
+import { Button } from './Button';
 
-const ButtonPannel = (clickHandler) => {
-  const propsBtns = [{ name: 'AC', dynamicClass: 'btn highlight' },
-    { name: '+/-', dynamicClass: 'btn highlight' },
-    { name: '%', dynamicClass: 'btn highlight' },
-    { name: '÷', dynamicClass: 'btn highlight' },
-    { name: '7', dynamicClass: 'btn' },
-    { name: '8', dynamicClass: 'btn' },
-    { name: '9', dynamicClass: 'btn' },
-    { name: 'X', dynamicClass: 'btn highlight' },
-    { name: '4', dynamicClass: 'btn' },
-    { name: '5', dynamicClass: 'btn' },
-    { name: '6', dynamicClass: 'btn' },
-    { name: '-', dynamicClass: 'btn highlight' },
-    { name: '1', dynamicClass: 'btn' },
-    { name: '2', dynamicClass: 'btn' },
-    { name: '3', dynamicClass: 'btn' },
-    { name: '+', dynamicClass: 'btn highlight' },
-    { name: '0', dynamicClass: 'btn' },
-    { name: '.', dynamicClass: 'btn highlight' },
-    { name: '=', dynamicClass: 'btn equal' },
-    { name: '' },
-  ];
-
-  const createPannelLine = (propsBtns, line) => {
-    const result = [];
-    let i = 0;
-    let index = line * 4;
-    while (i < 4 && index < (propsBtns.length)) {
-      result.push(
-        <Button
-          key={index + 1}
-          name={propsBtns[index].name}
-          dynamicClass={propsBtns[index].dynamicClass}
-          clickHandler={clickHandler.onClick}
-        />,
-      );
-      i += 1;
-      index += 1;
-    }
-
-    return (
-      <div className="calculator__buttons">
-        { result.map(btn => btn) }
-      </div>
-    );
-  };
-
+export function ButtonPanel(props) {
   return (
     <div>
-      { createPannelLine(propsBtns, 0) }
-      { createPannelLine(propsBtns, 1) }
-      { createPannelLine(propsBtns, 2) }
-      { createPannelLine(propsBtns, 3) }
-      { createPannelLine(propsBtns, 4) }
+      <div className="calculator__buttons">
+        <Button buttonName="AC" onClick={() => props.onClick('AC')} dinamycClass="btn highlight" />
+        <Button buttonName="+/-" onClick={() => props.onClick('+/-')} dinamycClass="btn highlight" />
+        <Button buttonName="%" onClick={() => props.onClick('%')} dinamycClass="btn highlight" />
+        <Button buttonName="÷" onClick={() => props.onClick('÷')} dinamycClass="btn highlight" />
+      </div>
+      <div className="calculator__buttons">
+        <Button buttonName="7" onClick={() => props.onClick('7')} dinamycClass="btn" />
+        <Button buttonName="8" onClick={() => props.onClick('8')} dinamycClass="btn" />
+        <Button buttonName="9" onClick={() => props.onClick('9')} dinamycClass="btn" />
+        <Button buttonName="x" onClick={() => props.onClick('x')} dinamycClass="btn highlight" />
+      </div>
+      <div className="calculator__buttons">
+        <Button buttonName="4" onClick={() => props.onClick('4')} dinamycClass="btn" />
+        <Button buttonName="5" onClick={() => props.onClick('5')} dinamycClass="btn" />
+        <Button buttonName="6" onClick={() => props.onClick('6')} dinamycClass="btn" />
+        <Button buttonName="-" onClick={() => props.onClick('-')} dinamycClass="btn highlight" />
+      </div>
+      <div className="calculator__buttons">
+        <Button buttonName="1" onClick={() => props.onClick('1')} dinamycClass="btn" />
+        <Button buttonName="2" onClick={() => props.onClick('2')} dinamycClass="btn" />
+        <Button buttonName="3" onClick={() => props.onClick('3')} dinamycClass="btn" />
+        <Button buttonName="+" onClick={() => props.onClick('+')} dinamycClass="btn highlight" />
+      </div>
+      <div className="calculator__buttons">
+        <Button buttonName="0" onClick={() => props.onClick('0')} dinamycClass="btn" />
+        <Button buttonName="." onClick={() => props.onClick('.')} dinamycClass="btn" />
+        <Button buttonName="=" onClick={() => props.onClick('=')} dinamycClass="btn equal" />
+        <Button buttonName="" />
+      </div>
     </div>
   );
+}
+ 
+ButtonPanel.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
 
-export default ButtonPannel;
+export default { ButtonPanel };
