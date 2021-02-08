@@ -1,15 +1,34 @@
-import React from 'react';
-import Display from './Display';
-import ButtonPannel from './ButtonPannel';
-// eslint-disable-next-line no-unused-vars
-import calculate from '../logic/calculate';
-import '../index.css';
+import React, { Component } from 'react';
+import { Display } from './Display';
+import { ButtonPannel } from './ButtonPannel';
+import { calculate } from '../logic/calculate';
 
-const App = () => (
-  <div className="calculator">
-    <Display />
-    <ButtonPannel />
-  </div>
-);
+export class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+  }
 
-export default App;
+  handleClick(buttonName) {
+    let calcObject = this.state;
+    calcObject = calculate(calcObject, buttonName);
+    const { total, next, operation } = calcObject;
+    this.setState({ total, next, operation });
+  }
+
+  render() {
+    const { next, operation } = this.state;
+    return (
+      <div className="calculator">
+        <Display numberDisplay={next} operation={operation} />
+        <ButtonPannel onClick={buttonName => this.handleClick(buttonName)} />
+      </div>
+    );
+  }
+}
+
+export default { App };
