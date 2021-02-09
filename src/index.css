@@ -82,6 +82,28 @@ body {
   box-shadow: inset 6px 6px 10px rgba(164, 216, 243, 0.5), inset -6px -6px 10px rgba(255, 255, 255, 0.6);
 }
 
+.calculator__buttons:nth-last-child(1) .btn:nth-last-child(2){
+  background-color: #6b8afa;
+  color: white;
+  box-shadow: 3px 11px 25px rgba(48, 91, 248, 0.6), -6px -6px 10px rgba(255, 255, 255, 0.6), inset -3px -3px 14px rgba(255, 255, 255, 0.2), inset 8px 8px 14px rgba(48, 91, 248, 0.5);
+  grid-row-start: span 2;
+  grid-column-start: 4;
+  border-radius: 50px;
+  width: 98px;
+}
+
+.calculator__buttons:nth-last-child(1) .btn:nth-last-child(2):hover{
+  background-color: #5277f9; 
+}
+
+.calculator__buttons:nth-last-child(1) .btn:nth-last-child(2):focus {
+  box-shadow: 3px 11px 25px rgba(8, 60, 247, 0.6), -6px -6px 10px rgba(255, 255, 255, 0.9), inset 3px 11px 15px rgba(8, 60, 247, 0.5), inset -6px -6px 8px rgba(206, 216, 253, 0.5);
+}
+
+.calculator__buttons:nth-last-child(1) .btn:nth-last-child(2):active:focus {
+  box-shadow: 3px 11px 25px rgba(8, 60, 247, 0.6), -6px -6px 10px rgba(255, 255, 255, 0.9), inset 3px 11px 15px rgba(8, 60, 247, 0.5), inset -6px -6px 8px rgba(206, 216, 253, 0.5);
+}
+
 .calculator__buttons .btn.equal {
   background-color: #6b8afa;
   color: white;

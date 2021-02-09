@@ -1,29 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function Button(props) {
-  const {
-    buttonName, onClick, dinamycClass = 'btn',
-  } = props;
-  return (
-    <button
-      type="button"
-      className={dinamycClass}
-      onClick={onClick}
-    >
-      { buttonName }
-    </button>
-  );
-}
+const Button = ({ name, handleClick }) => (
+  <button
+    type="button"
+    id={`button-${name}`}
+    onClick={handleClick}
+    className="btn"
+  >
+    {name}
+  </button>
+);
 
 Button.propTypes = {
-  buttonName: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  dinamycClass: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {
-  dinamycClass: 'btn',
+  
 };
 
-export default { Button };
+export default Button;
