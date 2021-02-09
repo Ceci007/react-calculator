@@ -1,4 +1,3 @@
-  
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
@@ -12,14 +11,14 @@ const buttonsLabel = [
 ];
 
 class ButtonPannel extends React.Component {
-  renderButtonGroup({ group, id, key }) {
+  renderButtonGroup({ group, key }) {
     const { clickHandler } = this.props;
-    const buttonGroups = group.map((label, index) => (
-        <Button
-          key={label}
-          name={label}
-          handleClick={() => clickHandler(label)}
-        />
+    const buttonGroups = group.map(label => (
+      <Button
+        key={label}
+        name={label}
+        handleClick={() => clickHandler(label)}
+      />
     ));
     return (
       <div key={key} className="calculator__buttons">
@@ -29,11 +28,10 @@ class ButtonPannel extends React.Component {
   }
 
   render() {
-    const buttonPannel = buttonsLabel.map(({ group, id }) =>
-      this.renderButtonGroup({ group, id, key: id }),
-    );
+    const buttonPannel = buttonsLabel
+      .map(({ group, id }) => this.renderButtonGroup({ group, id, key: id }));
 
-    return buttonPannel
+    return buttonPannel;
   }
 }
 

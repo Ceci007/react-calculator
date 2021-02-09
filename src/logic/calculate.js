@@ -1,4 +1,3 @@
-  
 import operate from './operate';
 
 const calculate = (data, buttonName) => {
