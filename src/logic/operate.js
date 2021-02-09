@@ -1,39 +1,27 @@
-const Big = require('big.js');
+import Big from 'big.js';
 
-export function operate(numberOne, numberTwo, operation) {
-  let result = 0;
-  let x;
-  let y;
-  if (numberOne != null) {
-    x = new Big(numberOne);
-  }
+const operate = (firstOperand, secondOperand, operation) => {
+  const operand = Big(firstOperand);
 
-  if (numberTwo != null) {
-    y = new Big(numberTwo);
-  }
   switch (operation) {
     case '+':
-      result = y.plus(x);
-      break;
+      return operand.plus(secondOperand).toString();
     case '-':
-      result = y.minus(x);
-      break;
-    case 'x':
-      result = y.times(x);
-      break;
+      return operand.minus(secondOperand).toString();
+    case 'X':
+      return operand.times(secondOperand).toString();
     case '÷':
-      result = y.div(x);
-      break;
+      if (secondOperand === '0') {
+        return '0';
+      }
+      return operand.div(secondOperand).toString();
     case '%':
-      result = x.div(100);
-      break;
-    case '+/-':
-      result = x.times(-1);
-      break;
+      return operand.mod(secondOperand).toString();
     default:
-      result = 0;
+      break;
   }
-  return result;
-}
 
-export default { operate };
+  return firstOperand;
+};
+
+export default operate;

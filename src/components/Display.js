@@ -1,24 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function Display(props) {
-  const { operation, numberDisplay } = props;
-  return (
-    <div className="calculator__screen">
-      <span className="calculator__operation">{ operation }</span>
-      <span className="calculator__result">{ numberDisplay == null ? '0' : numberDisplay }</span>
+const Display = ({ result, currentButton }) => (
+  <div className="calculator__screen">
+    <div className="calculator__operation">{currentButton}</div>
+    <div className="calculator__result">
+      {result || '0'}
     </div>
-  );
-}
+  </div>
+);
 
 Display.propTypes = {
-  numberDisplay: PropTypes.string,
-  operation: PropTypes.string,
+  result: PropTypes.string,
+  currentButton: PropTypes.string,
 };
 
 Display.defaultProps = {
-  numberDisplay: '0',
-  operation: '',
+  result: '0',
+  currentButton: '',
 };
 
-export default { Display };
+export default Display;
