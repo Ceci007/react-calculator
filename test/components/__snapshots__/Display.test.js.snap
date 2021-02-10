@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display component should render with an assigned result value 1`] = `
+<div
+  className="calculator__screen"
+>
+  <div
+    className="calculator__operation"
+  >
+    
+  </div>
+  <div
+    className="calculator__result"
+    id="display"
+  >
+    20
+  </div>
+</div>
+`;
+
+exports[`Display component should render with default result value 1`] = `
+<div
+  className="calculator__screen"
+>
+  <div
+    className="calculator__operation"
+  >
+    
+  </div>
+  <div
+    className="calculator__result"
+    id="display"
+  >
+    0
+  </div>
+</div>
+`;
