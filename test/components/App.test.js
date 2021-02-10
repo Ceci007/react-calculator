@@ -49,9 +49,3 @@ describe('when App button is clicked', () => {
     expect(display.textContent).toBe('0123456789');
   });
 });
-
-
-
-
-
-
