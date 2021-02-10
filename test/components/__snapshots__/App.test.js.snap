@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component should  should render ButtonPanel and Display components 1`] = `
+exports[`App component should  should render ButtonPannel and Display components 1`] = `
 <div
   className="calculator"
 >
@@ -12,6 +12,7 @@ exports[`App component should  should render ButtonPanel and Display components 
     />
     <div
       className="calculator__result"
+      id="display"
     >
       0
     </div>
