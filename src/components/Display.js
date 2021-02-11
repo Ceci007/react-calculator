@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Display = ({ result, currentButton }) => (
   <div className="calculator__screen">
     <div className="calculator__operation">{currentButton}</div>
-    <div className="calculator__result">
+    <div className="calculator__result" id="display">
       {result || '0'}
     </div>
   </div>
