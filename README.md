@@ -1,12 +1,15 @@
 # react-calculator
 Creating a simple calculator with React
 
+![calculator-app](./calculator-screenshot.png)
+
 
 ## Table of Contents
 
 * [Live Demo](#demo)
 * [Installation](#installation)
 * [Built With](#built-with)
+* [tests](#tests)
 * [Contributing](#contributing)
 * [Acknowledgments](#acknowledgments)
 * [Authors](#author)
@@ -15,7 +18,7 @@ Creating a simple calculator with React
 
 ## Live Demo
 
-[Live Demo](https://calculator-ceci.netlify.app)
+[Live Demo](https://ceci-calculator.netlify.app/)
 
 ## Installation
 
@@ -25,13 +28,19 @@ $ cd <folder>
 $ git clone https://github.com/Ceci007/react-calculator.git
 ```
 
-Run `npm install` and after `npm run build` in your terminal.
+Run `npm install` and after `npm start` in your terminal.
 
 ## Built With
 - React
 - HTML
 - CSS
 - Heroku
+
+## Tests
+
+Run `npm test` to run all tests
+
+![tests](./tests-screenshot.png)
 
 ## Contributing
 
